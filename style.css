@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(234, 29%, 20%);
+    font-family: 'Roboto', arial;
+}
+
+main{
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Ajuster la largeur maximale */
+    width: 90%;
+    align-items: center; /* Pour centrer verticalement */
+}
+
+
+.image {
+    background-image: url('assets/images/illustration-sign-up-desktop.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 20rem;
+    min-height: 30rem;
+    border-radius: 0.5rem;
+}
+
+.newsletter-content{
+    padding: 3rem;
+}
+
+.newsletter-content h1{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.newsletter-content p{
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+    position: relative; /* Pour positionner le pseudo-élément */
+    padding-left: 25px; /* Espace pour le pseudo-élément */
+}
+
+li::before {
+    content: "✓"; /* Symbole de coche */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007bff; /* Couleur bleue */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column; /* Mise en colonne des éléments */
+    align-items: flex-start; /* Alignement à gauche */
+}
+
+
+input[type="email"] {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Occupe toute la largeur */
+    margin: 2rem 0;
+    cursor: pointer;
+    box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+}
+
+.formulaire{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error{
+    color: hsl(4, 100%, 67%);
+}
+
+button {
+    background-color: hsl(235, 18%, 26%);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Largeur automatique */
+}
+
+button:hover{
+    background-color: hsl(4, 100%, 67%);
+}
+.image-container {
+    flex: 1; /* Occupe l'autre moitié de l'espace disponible */
+    text-align: center; /* Centre l'image horizontalement */
+}
+
+.image-container img {
+    max-width: 100%; /* L'image ne dépasse pas la largeur du conteneur */
+    height: auto; /* Garde les proportions de l'image */
+}
+
+
+.card-One{
+    display: none;
+    max-width: 350px;
+    max-height: 400px;
+    padding: 2rem;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 1rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.card-One img{
+    padding: 1rem;
+    border-radius: 60%;
+    border: none;
+}
+.card-One h1{
+    color: hsl(213, 19%, 18%);
+    padding: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.card-One p{
+    color: hsl(213, 19%, 18%);
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+}
+
+/* --- MOBILE / TABLET --- */
+
+/* Pour les écrans plus petits, comme les tablettes et mobiles */
+@media (max-width: 1024px) {
+    main{
+        flex-direction: column-reverse;
+    }
+    .image {
+        background-image: url('assets/images/illustration-sign-up-mobile.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 0.5rem;
+        width: 100%;
+    }
+
+    main h1 {
+        font-size: 2rem; 
+
+    main p {
+        font-size: 1.4rem; 
+
+    main button {
+        width: 100%; 
+        padding: 1rem 0; 
+    }
+
+    main .card button:hover {
+        background-color: hsl(4, 100%, 67%);
+    }
+
+    .card-One{
+        height: 100%;
+    }
+}
+
+/* --- MOBILE --- */
+
+/* Pour les petits écrans comme les téléphones */
+@media (max-width: 768px) {
+    main{
+        flex-direction: column-reverse;
+    }
+
+    .image {
+        background-image: url('assets/images/illustration-sign-up-mobile.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 0.5rem;
+        width: 100%;
+    }
+    
+
+    main h1 {
+        font-size: 1.8rem; 
+    }
+
+    main p {
+        font-size: 1.2rem;
+    }
+
+    main button {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    main .card button:hover {
+        background-color: hsl(4, 100%, 67%);
+    }
+
+    .card-One{
+        height: 100%;
+    }
+}
+
+/* --- TRÈS PETIT ÉCRAN --- */
+
+/* Pour les très petits écrans (téléphones portrait) */
+@media (max-width: 480px) {
+    main{
+        flex-direction: column-reverse;
+    }
+    
+    .image {
+        background-image: url('assets/images/illustration-sign-up-mobile.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 0.5rem;
+        width: 100%;
+
+    }
+
+    main h1 {
+        font-size: 1.8rem; 
+    }
+
+    main p {
+        font-size: 1.2rem;
+    }
+
+    main button {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    main button:hover {
+        background-color: hsl(4, 100%, 67%);
+    }
+
+    .card-One{
+        height: 100%;
+    }
+}}}
